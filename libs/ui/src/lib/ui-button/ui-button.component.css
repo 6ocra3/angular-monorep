@@ -1,0 +1,11 @@
+.ui-button{
+    outline: none;
+    background-color: aqua;
+    border: none;
+    color: crimson;
+    padding: 8px 18px;
+    font-size: 16px;
+}
+.ui-button.success{
+    background-color: chartreuse;
+}
