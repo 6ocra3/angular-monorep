@@ -13,6 +13,7 @@ export class UiButtonComponent implements AfterViewInit {
   @Input() click?: () => void;
   @Input() color: buttonColorType = "";
   @Input() isLoading: boolean = false;
+  @Input() disabled: boolean = false;
   @ViewChild('buttonRef') buttonRef: MatButton;
 
   ngAfterViewInit(): void {

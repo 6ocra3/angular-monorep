@@ -6,7 +6,7 @@
     <ui-form-field>
         <ui-label>Пароль</ui-label>
         <ui-input [(ngModel)]="password" name="password" placeholder="Введите пароль" [inputType]="'password'"></ui-input>    </ui-form-field>
-    <ui-button color="primary" [isLoading]="isSending">
+    <ui-button color="primary" [isLoading]="isSending" [disabled]="!login || !password">
         Войти
     </ui-button>
 </form>
