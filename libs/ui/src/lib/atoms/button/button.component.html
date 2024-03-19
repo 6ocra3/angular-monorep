@@ -1,0 +1,4 @@
+<button #buttonRef mat-raised-button [color]="color" [disabled]="isLoading" (click)="click?.()">
+    <ng-content *ngIf="!isLoading"></ng-content>
+    <ui-loader *ngIf="isLoading"></ui-loader>
+</button>
