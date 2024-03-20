@@ -1,4 +1,4 @@
 <div class="auth-block">
     <h1 class="title">Войти в аккаунт</h1>
-    <ui-auth-form></ui-auth-form>
+    <ui-auth-form (submitEvent)="submitEvent.emit($event)"></ui-auth-form>
 </div>

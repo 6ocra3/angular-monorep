@@ -9,15 +9,9 @@ type buttonColorType = "" | "primary" | "accent" | "warn"
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
 })
-export class UiButtonComponent implements AfterViewInit {
+export class UiButtonComponent{
   @Input() click?: () => void;
   @Input() color: buttonColorType = "";
-  @Input() isLoading: boolean = false;
   @Input() disabled: boolean = false;
-  @ViewChild('buttonRef') buttonRef: MatButton;
-
-  ngAfterViewInit(): void {
-    this.buttonRef._elementRef.nativeElement.style.width = this.buttonRef._elementRef.nativeElement.clientWidth + "px"
-  }
 
 }

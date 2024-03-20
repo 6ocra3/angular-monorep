@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+
 @Component({
   selector: 'ui-auth-block',
   templateUrl: './auth-block.component.html',
-  styleUrl: './auth-block.component.scss',
+  styleUrls: ['./auth-block.component.scss'], // исправление опечатки
 })
 export class UiAuthBlockComponent {
-
+  @Output() submitEvent = new EventEmitter<{login: string, password: string}>();
 }

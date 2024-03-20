@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EventEmitter } from '@angular/core';
 @Component({
@@ -12,9 +12,11 @@ export class UiAuthFormComponent {
     password: string = ""
 
     isSending = false;
+    @Output() submitEvent = new EventEmitter<{login: string, password: string}>(); // Создание EventEmitter
 
     submit(){
         this.isSending = true
+        this.submitEvent.emit({login: this.login, password: this.password});
         setTimeout( () =>{
           this.isSending = false
           console.log(this.login, this.password)
