@@ -5,6 +5,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
     { path: '', component: MainPageComponent, canActivate:[AuthGuard]},
+    // { path: '', component: MainPageComponent},
     { path: 'login', component: AuthPageComponent },
   ];
   

@@ -7,9 +7,11 @@ import { AtomsUiLib } from '../atoms/atoms.module';
 import {MatInputModule} from '@angular/material/input';
 import { UiAuthFormComponent } from './auth-form/auth-form.component';
 import { FormsModule } from '@angular/forms';
+import { UiNavBarComponent } from './nav-bar/nav-bar.component';
 @NgModule({
   declarations: [
     UiAuthFormComponent,
+    UiNavBarComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { FormsModule } from '@angular/forms';
   ],
   exports: [
     UiAuthFormComponent,
+    UiNavBarComponent
   ]
 })
 export class MoleculesUiLib { }

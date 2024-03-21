@@ -10,13 +10,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { UiLabelComponent } from './label/label.component';
 import { UiFormFieldComponent } from './form-field/form-field.component';
 import { UiLoaderComponent } from './loader/loader.component';
+import { UiNavItemComponent } from './nav-item/nav-item.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     UiButtonComponent,
     UiInputComponent,
     UiLabelComponent,
     UiFormFieldComponent,
-    UiLoaderComponent
+    UiLoaderComponent,
+    UiNavItemComponent
   ],
   imports: [
     CommonModule, // Используйте CommonModule для директив
@@ -24,14 +27,16 @@ import { UiLoaderComponent } from './loader/loader.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterModule
   ],
   exports: [
     UiButtonComponent,
     UiInputComponent,
     UiLabelComponent,
     UiFormFieldComponent,
-    UiLoaderComponent
+    UiLoaderComponent,
+    UiNavItemComponent
   ]
 })
 export class AtomsUiLib { }

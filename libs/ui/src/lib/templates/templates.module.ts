@@ -6,9 +6,11 @@ import { AtomsUiLib } from '../atoms/atoms.module';
 import { MoleculesUiLib } from '../molecules/molecules.module';
 import { UiAuthTemplateComponent } from './auth-template/auth-template.component';
 import { OrganismsUiLib } from '../organisms/organisms.module';
+import { UiMainTemplateComponent } from './main-template/main-template.component';
 @NgModule({
   declarations: [
-    UiAuthTemplateComponent
+    UiAuthTemplateComponent,
+    UiMainTemplateComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { OrganismsUiLib } from '../organisms/organisms.module';
     OrganismsUiLib
   ],
   exports: [
-    UiAuthTemplateComponent
+    UiAuthTemplateComponent,
+    UiMainTemplateComponent
   ]
 })
 export class TemplatesUiLib { }

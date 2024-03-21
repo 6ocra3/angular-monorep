@@ -10,7 +10,6 @@ export class AuthPageComponent {
 
     constructor(private authService: AuthService,
         private router: Router){
-
     }
 
     async authSubmit(login: string, password: string){

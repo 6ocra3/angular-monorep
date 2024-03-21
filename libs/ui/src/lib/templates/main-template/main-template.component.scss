@@ -1,0 +1,13 @@
+.main-template{
+    display: flex;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+ui-header-block, ui-content-block{
+    flex: 1;
+}
