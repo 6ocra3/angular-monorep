@@ -1,7 +1,9 @@
 <div class="main-template">
-    <ui-aside-block></ui-aside-block>
+    <div>
+        <ng-content select="ui-aside-block"></ng-content>
+    </div>
     <div class="right">
-        <ui-header-block></ui-header-block>
-        <ui-content-block></ui-content-block>
+        <ng-content select="ui-header-block"></ng-content>
+        <ng-content select="ui-content-block"></ng-content>
     </div>
 </div>

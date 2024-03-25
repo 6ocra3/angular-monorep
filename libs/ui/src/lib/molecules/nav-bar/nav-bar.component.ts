@@ -12,15 +12,4 @@ type pathT = {
 })
 
 export class UiNavBarComponent{
-    paths: pathT[] = [
-      {
-        path: "", value: "Главная",
-      },
-      {
-        path: "/catalog", value: "Каталог",
-      },
-      {
-        path: "/profile", value: "Профиль",
-      },
-    ]
 }

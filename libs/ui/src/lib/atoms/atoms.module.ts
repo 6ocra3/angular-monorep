@@ -12,6 +12,9 @@ import { UiFormFieldComponent } from './form-field/form-field.component';
 import { UiLoaderComponent } from './loader/loader.component';
 import { UiNavItemComponent } from './nav-item/nav-item.component';
 import { RouterModule } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
+import { UiTableComponent } from './table/table.component';
+import { MatPaginator } from '@angular/material/paginator';
 @NgModule({
   declarations: [
     UiButtonComponent,
@@ -19,7 +22,9 @@ import { RouterModule } from '@angular/router';
     UiLabelComponent,
     UiFormFieldComponent,
     UiLoaderComponent,
-    UiNavItemComponent
+    UiNavItemComponent,
+    UiTableComponent
+
   ],
   imports: [
     CommonModule, // Используйте CommonModule для директив
@@ -28,7 +33,9 @@ import { RouterModule } from '@angular/router';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    RouterModule
+    RouterModule,
+    MatTableModule,
+    MatPaginator
   ],
   exports: [
     UiButtonComponent,
@@ -36,7 +43,8 @@ import { RouterModule } from '@angular/router';
     UiLabelComponent,
     UiFormFieldComponent,
     UiLoaderComponent,
-    UiNavItemComponent
+    UiNavItemComponent,
+    UiTableComponent,
   ]
 })
 export class AtomsUiLib { }

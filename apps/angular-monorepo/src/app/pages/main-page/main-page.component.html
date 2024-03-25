@@ -1,1 +1,31 @@
-<ui-main-template></ui-main-template>
+<ui-main-template>
+    <!-- <ui-aside-block>
+        <h1 class="aside-title">ЛОГОТИП</h1>
+        <ui-nav-bar>
+            <ui-nav-item
+                *ngFor="let path of paths"
+                [path]="path.path">
+                {{path.value}}
+            </ui-nav-item>
+        </ui-nav-bar>
+    </ui-aside-block> -->
+    <ui-header-block>
+        <mat-icon>question_answer</mat-icon>
+        <div class="header-right">
+            <mat-icon>shopping_cart</mat-icon>
+            <mat-icon>account_circle</mat-icon>
+        </div>
+    </ui-header-block>
+    <ui-content-block>
+        <div class="table">
+            <ui-table [displayedColumns]="displayedColumns" [dataSource]="dataSource">
+                <ng-template #ageTemplate let-element="element" let-column="column">
+                    <div class="age_display">
+                      You are {{ element.age > 18 ? "old" : "young" }}
+                    </div>
+                </ng-template>
+            </ui-table>
+        </div>
+
+    </ui-content-block>
+</ui-main-template>

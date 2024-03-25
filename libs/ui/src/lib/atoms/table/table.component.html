@@ -1,0 +1,35 @@
+<ng-template #defaultColumnTemplate let-element="element" let-column="column">
+  {{ element[column] }}
+</ng-template>
+
+<ng-template #defaultHeaderTemplate let-column="column">
+  {{ column }}
+</ng-template>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column.column">
+        <th mat-header-cell *matHeaderCellDef>
+          <ng-container 
+          *ngTemplateOutlet="column.headerElTemplate || defaultHeaderTemplate; 
+                              context:{column: column.column}">
+          </ng-container>
+        </th>
+        <td mat-cell *matCellDef="let element; let columnIndex = index"> 
+          <ng-container 
+            *ngTemplateOutlet="column.columnElTemplate || defaultColumnTemplate; 
+                               context: {element: element, column: column.column}">
+          </ng-container> 
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="columnsNames"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsNames;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+  

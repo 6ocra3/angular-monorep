@@ -6,6 +6,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AuthPageComponent } from './auth-page/auth-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SharedUiLib } from '@angular-monorepo/shared-ui';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AuthPageComponent,
@@ -13,7 +14,8 @@ import { SharedUiLib } from '@angular-monorepo/shared-ui';
   ],
   imports: [
     BrowserModule,
-    SharedUiLib
+    SharedUiLib,
+    MatIconModule
   ],
   exports:[
     AuthPageComponent,
